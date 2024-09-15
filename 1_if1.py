@@ -19,7 +19,33 @@ def main():
     Эта функция вызывается автоматически при запуске скрипта в консоли
     В ней надо заменить pass на ваш код
     """
-    pass
+    name = input('Как вас зовут: ')
+    age = input('Сколько вам лет: ')
+    age = float(age)
+
+    def user_status(age):
+
+      if 0 <= age < 2:
+        return "идёт коза рогатая за малыми ребятами"
+      
+      elif 2 <= age < 7:
+        return "ходит в детский сад"
+      
+      elif 7 <= age < 18:
+        return "школяр"
+      
+      elif 18 <= age < 25:
+        return "студент"
+      
+      elif 25 <= age < 70:
+        return "ходит на работу"
+
+      else:
+        return None
+
+    status = user_status(age)
+
+    print(f'{name} {status}')
 
 if __name__ == "__main__":
     main()
