@@ -18,7 +18,7 @@ def hello_user():
 
       try:
         ask_user = input('Как дела? ')
-        if ask_user.upper() == 'ХОРОШО':
+        if ask_user.lower() == 'хорошо':
           break
       except KeyboardInterrupt:
          print('Пока!')
