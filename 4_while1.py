@@ -14,8 +14,15 @@ def hello_user():
     """
     Замените pass на ваш код
     """
-    pass
-
+    #было
+    #while True:
+    #  ask_user = input('Как дела? ')
+    #  if ask_user.lower() == 'хорошо':
+    #    break
     
+    ask_user = ''
+    while ask_user.lower() != 'хорошо':
+      ask_user = input('Как дела? ')
+          
 if __name__ == "__main__":
     hello_user()
