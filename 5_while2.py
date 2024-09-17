@@ -26,11 +26,12 @@ def ask_user(answers_dict):
     while True:
         
         bla_bla = input('Поболтаем? ')
+        bla_bla = bla_bla.capitalize() # добавила регистор
 
         if bla_bla == 'Пока':
             print('Ариведерчи')
             break
-        print(questions_and_answers.get(bla_bla))
+        print(questions_and_answers.get(bla_bla, 'Спроси, что-нибудь другое')) # добавила значение по умолчанию
     
 if __name__ == "__main__":
     ask_user(questions_and_answers)

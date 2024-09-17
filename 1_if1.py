@@ -23,27 +23,32 @@ def main():
     age = input('Сколько вам лет: ')
     age = float(age)
 
-    def user_status(age):
+    #было def user_status(age):
+    def get_user_status(age):
 
       if 0 <= age < 2:
         return "идёт коза рогатая за малыми ребятами"
       
-      elif 2 <= age < 7:
+      #было elif 2 <= age < 7: в данном варианте правильнее написать if вместо elif, т.к. получается лишнее сравнение
+      elif age < 7:
         return "ходит в детский сад"
       
-      elif 7 <= age < 18:
+      #было elif 7 <= age < 18:
+      elif age < 18:
         return "школяр"
       
-      elif 18 <= age < 25:
+      #было elif 18 <= age < 25:
+      elif age < 25:
         return "студент"
       
-      elif 25 <= age < 70:
+      #было elif 25 <= age < 70:
+      elif age < 70:
         return "ходит на работу"
 
       else:
         return None
 
-    status = user_status(age)
+    status = get_user_status(age)
 
     print(f'{name} {status}')
 
