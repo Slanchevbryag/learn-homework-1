@@ -24,18 +24,16 @@ def discounted(price, discount, max_discount=20):
 
     except (ValueError, TypeError):     
       print('Введите число') 
-
-    try:
-      if max_discount >= 100:
-        raise ValueError('Слишком большая максимальная скидка')
-      if discount >= max_discount:
-        return price
-      else:
-        return price - (price * discount / 100)
+      return
     
-    except TypeError:
-       print('Не могу вычислить')
-   
+    if max_discount >= 100:
+      raise ValueError('Слишком большая максимальная скидка')
+    
+    if discount >= max_discount:
+      return price
+    else:
+      return price - (price * discount / 100)
+        
 if __name__ == "__main__":
     
     print(discounted(100, 2))
